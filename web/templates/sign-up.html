@@ -1,0 +1,429 @@
+{% extends 'layout.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<div class="row signup-col-container">
+    <div class="signup-image-section">
+        <div class="signup-image">
+            <img src="assets/images/amera-signup-image.jpg" width="100%" alt="signup-image" />
+        </div>
+        <div class="signup-image-text">
+            <p style="font-size: 26px; font-weight: 800; color: white;">
+                CREATE ACCOUNT
+            </p>
+            <p style="font-size: 16px; font-weight: 600; color: white; display: flex; justify-content: center;">
+                with us
+            </p>
+        </div>
+    </div>
+  
+    <div class="signup-form">
+        <div class="">
+            <form method="POST" id="signup">
+                <div class="form-row">
+                    <div class="col-12 form-group" data-for="ip">
+                        <label for="ip" class="form-input-label" id="sign-up002">Check IP: &nbsp &nbsp</label>
+                        <label id="client-ip" style="letter-spacing: 1.5px;">{{ client_ip }}</label> 
+                    </div>
+                    <div class="row col-12">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 form-group" style="margin-bottom: 0;"">
+                            <div class="form-input-control" data-for="first_name">
+                                <label for="first_name" id="sign-up253" class="form-input-label">Name</label>
+                                <input onchange="storeSignupField(event)"  type="text" name="first_name" placeholder="First Name" required="required" class="form-control">
+                            </div>
+                            <div class="form-input-control" data-for="middle_initial" style="padding-top: 12px;">
+                                <input onchange="storeSignupField(event)" type="text" name="middle_initial" placeholder="Middle Initial" class="form-control" class="">
+                            </div>
+                            <div class="form-input-control" data-for="last_name" style="padding-top: 12px;">
+                                <input onchange="storeSignupField(event)" type="text" name="last_name" placeholder="Last Name" required="required" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 form-group" style="margin-bottom: 0;">
+                            <div class="form-input-control">
+                                <label for="image" class="form-input-label">Choose Profile Picture</label>
+                            </div>
+                            <div class="form-input-control">
+                                <img src="assets/images/profile-picture-cover.png"
+                                     width="120"
+                                     height="120"
+                                     class="rounded-circle mx-auto d-block"
+                                     id="profile-picture"
+                                     alt="Profile Picture">
+                            </div>
+                            <div class="form-input-control">
+                                <input id="image-input" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row col-12">
+                        <div data-for="username" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="username" id="sign-up254" class="form-input-label">Username</label>
+                            <input onchange="storeSignupField(event)" type="text" name="username" class="form-control" required="required">
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control" data-for="country">
+                            <label for="select_country" id="sign-up003" class="form-input-label">Country</label>
+                            <select onchange="storeSignupField(event)" name="select_country" id="select_country" class="form-control custom-select">
+                                <option value="AF" id="sign-up004">Afghanistan</option>
+                                <option value="AX" id="sign-up005">Åland Islands</option>
+                                <option value="AL" id="sign-up006">Albania</option>
+                                <option value="DZ" id="sign-up007">Algeria</option>
+                                <option value="AS" id="sign-up008">American Samoa</option>
+                                <option value="AD" id="sign-up009">Andorra</option>
+                                <option value="AO" id="sign-up010">Angola</option>
+                                <option value="AI" id="sign-up011">Anguilla</option>
+                                <option value="AQ" id="sign-up012">Antarctica</option>
+                                <option value="AG" id="sign-up013">Antigua and Barbuda</option>
+                                <option value="AR" id="sign-up014">Argentina</option>
+                                <option value="AM" id="sign-up015">Armenia</option>
+                                <option value="AW" id="sign-up016">Aruba</option>
+                                <option value="AU" id="sign-up017">Australia</option>
+                                <option value="AT" id="sign-up018">Austria</option>
+                                <option value="AZ" id="sign-up019">Azerbaijan</option>
+                                <option value="BS" id="sign-up020">Bahamas</option>
+                                <option value="BH" id="sign-up021">Bahrain</option>
+                                <option value="BD" id="sign-up022">Bangladesh</option>
+                                <option value="BB" id="sign-up023">Barbados</option>
+                                <option value="BY" id="sign-up024">Belarus</option>
+                                <option value="BE" id="sign-up025">Belgium</option>
+                                <option value="BZ" id="sign-up026">Belize</option>
+                                <option value="BJ" id="sign-up027">Benin</option>
+                                <option value="BM" id="sign-up028">Bermuda</option>
+                                <option value="BT" id="sign-up029">Bhutan</option>
+                                <option value="BO" id="sign-up030">Bolivia, Plurinational State of</option>
+                                <option value="BQ" id="sign-up031">Bonaire, Sint Eustatius and Saba</option>
+                                <option value="BA" id="sign-up032">Bosnia and Herzegovina</option>
+                                <option value="BW" id="sign-up033">Botswana</option>
+                                <option value="BV" id="sign-up034">Bouvet Island</option>
+                                <option value="BR" id="sign-up035">Brazil</option>
+                                <option value="IO" id="sign-up036">British Indian Ocean Territory</option>
+                                <option value="BN" id="sign-up037">Brunei Darussalam</option>
+                                <option value="BG" id="sign-up038">Bulgaria</option>
+                                <option value="BF" id="sign-up039">Burkina Faso</option>
+                                <option value="BI" id="sign-up040">Burundi</option>
+                                <option value="KH" id="sign-up041">Cambodia</option>
+                                <option value="CM" id="sign-up042">Cameroon</option>
+                                <option value="CA" id="sign-up043">Canada</option>
+                                <option value="CV" id="sign-up044">Cape Verde</option>
+                                <option value="KY" id="sign-up045">Cayman Islands</option>
+                                <option value="CF" id="sign-up046">Central African Republic</option>
+                                <option value="TD" id="sign-up047">Chad</option>
+                                <option value="CL" id="sign-up048">Chile</option>
+                                <option value="CN" id="sign-up049">China</option>
+                                <option value="CX" id="sign-up050">Christmas Island</option>
+                                <option value="CC" id="sign-up051">Cocos (Keeling) Islands</option>
+                                <option value="CO" id="sign-up052">Colombia</option>
+                                <option value="KM" id="sign-up053">Comoros</option>
+                                <option value="CG" id="sign-up054">Congo</option>
+                                <option value="CD" id="sign-up055">Congo, the Democratic Republic of the</option>
+                                <option value="CK" id="sign-up056">Cook Islands</option>
+                                <option value="CR" id="sign-up057">Costa Rica</option>
+                                <option value="CI" id="sign-up058">Côte d'Ivoire</option>
+                                <option value="HR" id="sign-up059">Croatia</option>
+                                <option value="CU" id="sign-up060">Cuba</option>
+                                <option value="CW" id="sign-up061">Curaçao</option>
+                                <option value="CY" id="sign-up062">Cyprus</option>
+                                <option value="CZ" id="sign-up063">Czech Republic</option>
+                                <option value="DK" id="sign-up064">Denmark</option>
+                                <option value="DJ" id="sign-up065">Djibouti</option>
+                                <option value="DM" id="sign-up066">Dominica</option>
+                                <option value="DO" id="sign-up067">Dominican Republic</option>
+                                <option value="EC" id="sign-up068">Ecuador</option>
+                                <option value="EG" id="sign-up069">Egypt</option>
+                                <option value="SV" id="sign-up070">El Salvador</option>
+                                <option value="GQ" id="sign-up071">Equatorial Guinea</option>
+                                <option value="ER" id="sign-up072">Eritrea</option>
+                                <option value="EE" id="sign-up073">Estonia</option>
+                                <option value="ET" id="sign-up074">Ethiopia</option>
+                                <option value="FK" id="sign-up075">Falkland Islands (Malvinas)</option>
+                                <option value="FO" id="sign-up076">Faroe Islands</option>
+                                <option value="FJ" id="sign-up077">Fiji</option>
+                                <option value="FI" id="sign-up078">Finland</option>
+                                <option value="FR" id="sign-up079">France</option>
+                                <option value="GF" id="sign-up080">French Guiana</option>
+                                <option value="PF" id="sign-up081">French Polynesia</option>
+                                <option value="TF" id="sign-up082">French Southern Territories</option>
+                                <option value="GA" id="sign-up083">Gabon</option>
+                                <option value="GM" id="sign-up084">Gambia</option>
+                                <option value="GE" id="sign-up085">Georgia</option>
+                                <option value="DE" id="sign-up086">Germany</option>
+                                <option value="GH" id="sign-up087">Ghana</option>
+                                <option value="GI" id="sign-up088">Gibraltar</option>
+                                <option value="GR" id="sign-up089">Greece</option>
+                                <option value="GL" id="sign-up090">Greenland</option>
+                                <option value="GD" id="sign-up091">Grenada</option>
+                                <option value="GP" id="sign-up092">Guadeloupe</option>
+                                <option value="GU" id="sign-up093">Guam</option>
+                                <option value="GT" id="sign-up094">Guatemala</option>
+                                <option value="GG" id="sign-up095">Guernsey</option>
+                                <option value="GN" id="sign-up096">Guinea</option>
+                                <option value="GW" id="sign-up097">Guinea-Bissau</option>
+                                <option value="GY" id="sign-up098">Guyana</option>
+                                <option value="HT" id="sign-up099">Haiti</option>
+                                <option value="HM" id="sign-up100">Heard Island and McDonald Islands</option>
+                                <option value="VA" id="sign-up101">Holy See (Vatican City State)</option>
+                                <option value="HN" id="sign-up102">Honduras</option>
+                                <option value="HK" id="sign-up103">Hong Kong</option>
+                                <option value="HU" id="sign-up104">Hungary</option>
+                                <option value="IS" id="sign-up105">Iceland</option>
+                                <option value="IN" id="sign-up106">India</option>
+                                <option value="ID" id="sign-up107">Indonesia</option>
+                                <option value="IR" id="sign-up108">Iran, Islamic Republic of</option>
+                                <option value="IQ" id="sign-up109">Iraq</option>
+                                <option value="IE" id="sign-up110">Ireland</option>
+                                <option value="IM" id="sign-up111">Isle of Man</option>
+                                <option value="IL" id="sign-up112">Israel</option>
+                                <option value="IT" id="sign-up113">Italy</option>
+                                <option value="JM" id="sign-up114">Jamaica</option>
+                                <option value="JP" id="sign-up115">Japan</option>
+                                <option value="JE" id="sign-up116">Jersey</option>
+                                <option value="JO" id="sign-up117">Jordan</option>
+                                <option value="KZ" id="sign-up118">Kazakhstan</option>
+                                <option value="KE" id="sign-up119">Kenya</option>
+                                <option value="KI" id="sign-up120">Kiribati</option>
+                                <option value="KP" id="sign-up121">Korea, Democratic People's Republic of</option>
+                                <option value="KR" id="sign-up122">Korea, Republic of</option>
+                                <option value="KW" id="sign-up123">Kuwait</option>
+                                <option value="KG" id="sign-up124">Kyrgyzstan</option>
+                                <option value="LA" id="sign-up125">Lao People's Democratic Republic</option>
+                                <option value="LV" id="sign-up126">Latvia</option>
+                                <option value="LB" id="sign-up127">Lebanon</option>
+                                <option value="LS" id="sign-up128">Lesotho</option>
+                                <option value="LR" id="sign-up129">Liberia</option>
+                                <option value="LY" id="sign-up130">Libya</option>
+                                <option value="LI" id="sign-up131">Liechtenstein</option>
+                                <option value="LT" id="sign-up132">Lithuania</option>
+                                <option value="LU" id="sign-up133">Luxembourg</option>
+                                <option value="MO" id="sign-up134">Macao</option>
+                                <option value="MK" id="sign-up135">Macedonia, the former Yugoslav Republic of</option>
+                                <option value="MG" id="sign-up136">Madagascar</option>
+                                <option value="MW" id="sign-up137">Malawi</option>
+                                <option value="MY" id="sign-up138">Malaysia</option>
+                                <option value="MV" id="sign-up139">Maldives</option>
+                                <option value="ML" id="sign-up140">Mali</option>
+                                <option value="MT" id="sign-up141">Malta</option>
+                                <option value="MH" id="sign-up142">Marshall Islands</option>
+                                <option value="MQ" id="sign-up143">Martinique</option>
+                                <option value="MR" id="sign-up144">Mauritania</option>
+                                <option value="MU" id="sign-up145">Mauritius</option>
+                                <option value="YT" id="sign-up146">Mayotte</option>
+                                <option value="MX" id="sign-up147">Mexico</option>
+                                <option value="FM" id="sign-up148">Micronesia, Federated States of</option>
+                                <option value="MD" id="sign-up149">Moldova, Republic of</option>
+                                <option value="MC" id="sign-up150">Monaco</option>
+                                <option value="MN" id="sign-up151">Mongolia</option>
+                                <option value="ME" id="sign-up152">Montenegro</option>
+                                <option value="MS" id="sign-up153">Montserrat</option>
+                                <option value="MA" id="sign-up154">Morocco</option>
+                                <option value="MZ" id="sign-up155">Mozambique</option>
+                                <option value="MM" id="sign-up156">Myanmar</option>
+                                <option value="NA" id="sign-up157">Namibia</option>
+                                <option value="NR" id="sign-up158">Nauru</option>
+                                <option value="NP" id="sign-up159">Nepal</option>
+                                <option value="NL" id="sign-up160">Netherlands</option>
+                                <option value="NC" id="sign-up161">New Caledonia</option>
+                                <option value="NZ" id="sign-up162">New Zealand</option>
+                                <option value="NI" id="sign-up163">Nicaragua</option>
+                                <option value="NE" id="sign-up164">Niger</option>
+                                <option value="NG" id="sign-up165">Nigeria</option>
+                                <option value="NU" id="sign-up166">Niue</option>
+                                <option value="NF" id="sign-up167">Norfolk Island</option>
+                                <option value="MP" id="sign-up168">Northern Mariana Islands</option>
+                                <option value="NO" id="sign-up169">Norway</option>
+                                <option value="OM" id="sign-up170">Oman</option>
+                                <option value="PK" id="sign-up171">Pakistan</option>
+                                <option value="PW" id="sign-up172">Palau</option>
+                                <option value="PS" id="sign-up173">Palestinian Territory, Occupied</option>
+                                <option value="PA" id="sign-up174">Panama</option>
+                                <option value="PG" id="sign-up175">Papua New Guinea</option>
+                                <option value="PY" id="sign-up176">Paraguay</option>
+                                <option value="PE" id="sign-up177">Peru</option>
+                                <option value="PH" id="sign-up178">Philippines</option>
+                                <option value="PN" id="sign-up179">Pitcairn</option>
+                                <option value="PL" id="sign-up180">Poland</option>
+                                <option value="PT" id="sign-up181">Portugal</option>
+                                <option value="PR" id="sign-up182">Puerto Rico</option>
+                                <option value="QA" id="sign-up183">Qatar</option>
+                                <option value="RE" id="sign-up184">Réunion</option>
+                                <option value="RO" id="sign-up185">Romania</option>
+                                <option value="RU" id="sign-up186">Russian Federation</option>
+                                <option value="RW" id="sign-up187">Rwanda</option>
+                                <option value="BL" id="sign-up188">Saint Barthélemy</option>
+                                <option value="SH" id="sign-up189">Saint Helena, Ascension and Tristan da Cunha</option>
+                                <option value="KN" id="sign-up190">Saint Kitts and Nevis</option>
+                                <option value="LC" id="sign-up191">Saint Lucia</option>
+                                <option value="MF" id="sign-up192">Saint Martin (French part)</option>
+                                <option value="PM" id="sign-up193">Saint Pierre and Miquelon</option>
+                                <option value="VC" id="sign-up194">Saint Vincent and the Grenadines</option>
+                                <option value="WS" id="sign-up195">Samoa</option>
+                                <option value="SM" id="sign-up196">San Marino</option>
+                                <option value="ST" id="sign-up197">Sao Tome and Principe</option>
+                                <option value="SA" id="sign-up198">Saudi Arabia</option>
+                                <option value="SN" id="sign-up199">Senegal</option>
+                                <option value="RS" id="sign-up200">Serbia</option>
+                                <option value="SC" id="sign-up201">Seychelles</option>
+                                <option value="SL" id="sign-up202">Sierra Leone</option>
+                                <option value="SG" id="sign-up203">Singapore</option>
+                                <option value="SX" id="sign-up204">Sint Maarten (Dutch part)</option>
+                                <option value="SK" id="sign-up205">Slovakia</option>
+                                <option value="SI" id="sign-up206">Slovenia</option>
+                                <option value="SB" id="sign-up207">Solomon Islands</option>
+                                <option value="SO" id="sign-up208">Somalia</option>
+                                <option value="ZA" id="sign-up209">South Africa</option>
+                                <option value="GS" id="sign-up210">South Georgia and the South Sandwich Islands</option>
+                                <option value="SS" id="sign-up211">South Sudan</option>
+                                <option value="ES" id="sign-up212">Spain</option>
+                                <option value="LK" id="sign-up213">Sri Lanka</option>
+                                <option value="SD" id="sign-up214">Sudan</option>
+                                <option value="SR" id="sign-up215">Suriname</option>
+                                <option value="SJ" id="sign-up216">Svalbard and Jan Mayen</option>
+                                <option value="SZ" id="sign-up217">Swaziland</option>
+                                <option value="SE" id="sign-up218">Sweden</option>
+                                <option value="CH" id="sign-up219">Switzerland</option>
+                                <option value="SY" id="sign-up220">Syrian Arab Republic</option>
+                                <option value="TW" id="sign-up221">Taiwan, Province of China</option>
+                                <option value="TJ" id="sign-up222">Tajikistan</option>
+                                <option value="TZ" id="sign-up223">Tanzania, United Republic of</option>
+                                <option value="TH" id="sign-up224">Thailand</option>
+                                <option value="TL" id="sign-up225">Timor-Leste</option>
+                                <option value="TG" id="sign-up226">Togo</option>
+                                <option value="TK" id="sign-up227">Tokelau</option>
+                                <option value="TO" id="sign-up228">Tonga</option>
+                                <option value="TT" id="sign-up229">Trinidad and Tobago</option>
+                                <option value="TN" id="sign-up230">Tunisia</option>
+                                <option value="TR" id="sign-up231">Turkey</option>
+                                <option value="TM" id="sign-up232">Turkmenistan</option>
+                                <option value="TC" id="sign-up233">Turks and Caicos Islands</option>
+                                <option value="TV" id="sign-up234">Tuvalu</option>
+                                <option value="UG" id="sign-up235">Uganda</option>
+                                <option value="UA" id="sign-up236">Ukraine</option>
+                                <option value="AE" id="sign-up237">United Arab Emirates</option>
+                                <option value="GB" id="sign-up238">United Kingdom</option>
+                                <option value="US" id="sign-up239">selected>United States</option>
+                                <option value="UM" id="sign-up240">United States Minor Outlying Islands</option>
+                                <option value="UY" id="sign-up241">Uruguay</option>
+                                <option value="UZ" id="sign-up242">Uzbekistan</option>
+                                <option value="VU" id="sign-up243">Vanuatu</option>
+                                <option value="VE" id="sign-up244">Venezuela, Bolivarian Republic of</option>
+                                <option value="VN" id="sign-up245">Viet Nam</option>
+                                <option value="VG" id="sign-up246">Virgin Islands, British</option>
+                                <option value="VI" id="sign-up247">Virgin Islands, U.S.</option>
+                                <option value="WF" id="sign-up248">Wallis and Futuna</option>
+                                <option value="EH" id="sign-up249">Western Sahara</option>
+                                <option value="YE" id="sign-up250">Yemen</option>
+                                <option value="ZM" id="sign-up251">Zambia</option>
+                                <option value="ZW" id="sign-up252">Zimbabwe</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-11"><hr></div>
+                    <div class="row col-12">
+                        <div data-for="email" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="email" id="sign-up255" class="form-input-label">Enter Email</label>
+                            <input onchange="storeSignupField(event)" type="text" id="email" name="email" class="form-control" required="required" >
+                            <div class="invalid-feedback" id="email_invalid_feedback">
+                                Please provide a valid Email.
+                            </div>
+                        </div>
+                        <div data-for="confirm_email" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="confirm_email" id="sign-up256" class="form-input-label">Confirm Email</label>
+                            <input onchange="storeSignupField(event)" type="text" name="confirm_email" id="confirm_email" class="form-control" required="required">
+                            <div class="invalid-feedback" id="confirm_email_invalid_feedback">
+                                Emails should must be same.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11"><hr></div>
+                    <div class="row col-12">
+                        <div data-for="cell_number" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="cell_number" id="sign-up257" class="form-input-label">Cell Number</label>
+                            <input onchange="storeSignupField(event)" type="text" name="cell_number" id="cell_number" placeholder="###-###-####" class="form-control" required="required">
+                            <div class="invalid-feedback" id="cell_number_invalid_feedback">
+                                Please provide a valid Cell Number.
+                            </div>
+                        </div>
+                        <div data-for="confirm_cell_number" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="confirm_cell_number" id="sign-up258" class="form-input-label">Confirm Cell Number</label>
+                            <input onchange="storeSignupField(event)" type="text" name="confirm_cell_number" id="confirm_cell_number" placeholder="###-###-####" class="form-control" required="required">
+                            <div class="invalid-feedback" id="confirm_cell_number_invalid_feedback">
+                                Cell Numbers should must be same.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-11"><hr></div>
+
+                    <div class="row col-12">
+                        <div data-for="dob" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="dob" id="sign-up259" class="form-input-label">Date Of Birth</label>
+                            <input onchange="storeSignupField(event)" type="text" name="dob" placeholder="MM/DD/YYYY" class="form-control" required="required">
+                        </div>
+                        <div data-for="gender" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group  form-input-control">
+                            <label for="gender" id="sign-up265" class="form-input-label">Male/Female</label>
+                            <select onchange="storeSignupField(event)" type="password" name="gender" class="custom-select">
+                                <option id="sign-up266">Female</option>
+                                <option id="sign-up267">Male</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-11"><hr></div>
+
+                    <div class="row col-12">
+                        <div data-for="postal_code" class="col-lg-4 col-md-4 col-sm-4 col-xs-6 form-group form-input-control">
+                            <label for="postal_code" id="sign-up260" class="form-input-label">Postal Code</label>
+                            <input onchange="storeSignupField(event)" type="text" name="postal_code" placeholder="#####" class="form-control" required="required">
+                        </div>
+                        <div data-for="city" class="col-lg-3 col-md-4 col-sm-4 col-xs-6 form-group form-input-control">
+                            <label for="city" id="sign-up261" class="form-input-label">City</label>
+                            <input onchange="storeSignupField(event)" type="text" name="city" class="form-control" required="required">
+                        </div>
+                        <div data-for="state" class="col-lg-3 col-md-4 col-sm-4 col-xs-6 form-groupform-input-control  form-input-control">
+                            <label for="state" id="sign-up262" class="form-input-label col-xs-6">State</label>
+                            <input onchange="storeSignupField(event)" type="text" name="state" class="form-control" required="required">
+                        </div>
+                    </div>
+
+                    <div class="col-11"><hr></div>
+
+                    <div class="row col-12">
+                        <div data-for="password" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="password" id="sign-up263" class="form-input-label">Create Password</label>
+                            <input onchange="storeSignupField(event)" type="password" name="password" class="form-control" required="required">
+                        </div>
+                        
+                        <div data-for="confirm_password" class="col-lg-5 col-md-6 col-sm-6 col-xs-6 form-group form-input-control">
+                            <label for="confirm_password" id="sign-up264" class="form-input-label">Confirm Password</label>
+                            <input onchange="storeSignupField(event)" type="password" name="confirm_password" class="form-control" required="required">
+                        </div>                    
+                    </div>
+
+                    <div class="col-11"><hr></div>
+
+                    <div data-for="multi_factor" class="rowform-group">
+                        <label for="multi_factor" id="sign-up268" style="font-weight: 500;">Do you want to enable multi factor authentication for Login: </label>
+                        <div class="custom-control custom-radio custom-control-inline" style="margin-left: 1rem;">
+                            <input onchange="storeSignupField(event)" type="radio" name="multi_factor" class="custom-control-input" value="yes">
+                            <label class="custom-control-label" for="Yes">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input onchange="storeSignupField(event)" type="radio" name="multi_factor" class="custom-control-input" value="no">
+                            <label class="custom-control-label" for="No" id="sign-up269">No</label>
+                        </div>
+                    </div>
+
+                    <div class="col-11"><hr></div>
+
+                    <div class="col-10 mt-2" style="display: flex; justify-content: center;">
+                        <button type="submit" class="btn btn-lg btn-outline-primary" id="sign-up270">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<label id="sign-up000" style="display: none" ></label>
+{% endblock %}
+{% block scripts %}
+<script src="assets/amera/js/signup.js"></script>
+{% endblock %}

@@ -1,0 +1,25 @@
+{
+  "name": "amera-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halkon/amera-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halkon/amera-web/issues"
+  },
+  "homepage": "https://github.com/halkon/amera-web#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-icons": "^1.0.0-alpha3",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  }
+}

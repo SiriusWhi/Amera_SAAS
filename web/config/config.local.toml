@@ -1,0 +1,5 @@
+bind = "0.0.0.0:5001"
+env_name = "LOCAL"
+log_level = "DEBUG"
+session_expiration = 3600
+invite_details_url = "/api/member/invite/{}"

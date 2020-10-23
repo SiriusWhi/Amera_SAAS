@@ -1,0 +1,74 @@
+{% extends 'layout.html' %}
+{% block title %}Create Password{% endblock %}
+{% block content %}
+<section class="amera-content invite-register-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-12 col-lg-12 block-content">
+                <h2 class="align-center" id="register001">CREATE PASSWORD TO&nbsp;<strong>AMERA IoT</strong></h2>
+                <p class="align-center">Fill out the form below</p>
+                <div class="row">
+                    {% if error == "INVITE_NOT_FOUND" %}
+                    <div id="invite-register-error-alert" data-form-alert="" class="alert alert-danger col-12" role="alert">
+                        <span id="invite-register-error-description"><label id="register002">No invite key found, please make sure to use the link given in the invite E-Mail</label></span>
+                    </div>
+                    {% elif error == "INVITE_EXPIRED" %}
+                    <div id="invite-register-error-alert" data-form-alert="" class="alert alert-danger col-12" role="alert">
+                        <span id="invite-register-error-description"><label id="register003">Your invite has expired</label></span>
+                    </div>
+                    {% elif error == "SERVER_ERROR" %}
+                    <div id="invite-register-error-alert" data-form-alert="" class="alert alert-danger col-12" role="alert">
+                        <span id="invite-register-error-description"><label id="register004">A server error has occurred, please try again later</label></span>
+                    </div>
+                    {% else %}
+                    <div hidden="hidden" id="invite-register-error-alert" data-form-alert="" class="alert alert-danger col-12" role="alert">
+                        <span id="invite-register-error-description"></span>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if invite %}
+                <form method="POST" id="invite-register">
+                    <div class="row">
+                        {% if not invite_key %}
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="text" name="invite_key" placeholder="Invite Key" class="form-control" required="required">
+                        </div>
+                        {% else %}
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="hidden" name="invite_key" value="{{invite['invite_key']}}">
+                        </div>
+                        {% endif %}
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="text" name="email" placeholder="E-Mail Address" class="form-control" required="required"
+                                value="{{invite['email']}}">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="text" name="first_name" placeholder="First Name" class="form-control" required="required"
+                                value="{{invite['first_name']}}">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="text" name="last_name" placeholder="Last Name" class="form-control" required="required"
+                                value="{{invite['last_name']}}">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input autocomplete="new-password" type="password" name="password" placeholder="Password" class="form-control" required="required" value="">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input autocomplete="new-password" type="password" name="confirm_password" placeholder="Confirm Password" class="form-control"
+                                required="required" value="">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" id="invite-register-submit" class="btn btn-primary"><label id="register005">CREATE PASSWORD</label></button>
+                        </div>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="/assets/amera/js/register_invite.js"></script>
+{% endblock %}
+<label id="register000" style="display: none" ></label>

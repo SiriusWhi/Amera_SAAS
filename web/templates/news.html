@@ -1,0 +1,189 @@
+{% extends 'layout.html' %}
+{% block title %}News{% endblock %}
+{% block content %}
+<section class="amera-content news-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-12 col-md-12">
+                <blockquote class="blockquote">
+                    <h2  id="news001">IoT security is bad. It's time to take a different approach.</h2>
+                    <p class="mb-0" id="news002">There are 127 new IoT devices connected to the internet every second, according to Cisco, and by 2025 there could be
+                        more than 75 billion IoT devices online. And all of them are going to get attacked.</p>
+                    <footer class="blockquote-footer">
+                        <label id="news003">By<a href="https://www.zdnet.com/meet-the-team/uk/mary-branscombe/" target="_blank">Mary Branscombe </a>
+                        <label id="news004"> for </label>
+                        <cite title="500 words into the future"></cite>
+                        <a href="https://www.zdnet.com/blog/500-words-into-the-future/" target="_blank" id="news005">500 words into the future</a></cite> |
+                        <label id="news006">February 11, 2020 -- 11:15 GMT (03:15 PST) | Topic: </label>
+                        <a href="https://www.zdnet.com/topic/internet-of-things/" target="_blank" id="news007">Internet of Things</a>
+                    </footer>
+                </blockquote>
+                <hr />
+                <p id="news08">The <strong>Internet of Things</strong> is getting mainstream enough
+                    that we need new acronyms to differentiate medical (IoMT) and industrial (IIoT) connected devices from consumer
+                    doorbells, security cameras, weather stations, tennis rackets and <strong>nappies</strong> that are already
+                    streaming data. IDC estimated some $200 billion was spent on Industrial IoT modules and sensors in 2019 as we move
+                    towards the grand vision of Industry 4.0.
+                </p>
+                <p id="news009">The idea is that we're now onto the fourth industrial revolution
+                    (steam power and electricity having given way to computers for the third industrial revolution). And part of this
+                    grand vision is that smart, connected, machine learning-powered machinery that can configure, monitor, improve and
+                    diagnose itself becomes part of everything from the factory floor to cars and cities.
+                </p>
+                <p id="news010">If you want to
+                    pull back from talking about the future of everything to just the manufacturing and production bits, that's Industry
+                    4.0. Then there's edge computing; having moved a lot of compute from the server room up to the cloud, we can now
+                    push the most time-sensitive computation next to the machinery, falling back to the cloud for the analytics and
+                    modelling that makes that local compute so targeted.
+                </p>
+                <p id="news011">Whatever we end up calling it, when IoT devices are
+                    controlling drug pumps, manufacturing operations, fleet management and the <strong>electrical grid</strong>, you
+                    <strong>want them to be secure</strong>.
+                </p>
+                <p id="news012">A firewall won't help with that. in the first half of 2018 Kaspersky
+                    IoT honeypots detected 12 million attacks aimed at IoT devices coming from 69.000 IP addresses. In the first half of
+                    2019 that was up to 105 million attacks from 276,000 unique IP addresses. Are you planning to block all the
+                    malicious IP addresses?
+                </p>
+                <p id="news013">A perimeter firewall hasn't made sense as the way to protect devices since modems and
+                    then smartphones made working outside the office common, just as walled castles are a bit out of date. Remote
+                    connection policies are an attempt to force everyone to go over the drawbridge where you can take a look at them and
+                    their identity papers. Conditional access policies are like putting someone very experienced on the gate: even if
+                    the identify papers are stolen or a good forgery, they look for suspicious behaviour like having got here impossibly
+                    fast or never having been here before but asking to go straight to the room in the tower with the treasure
+                    in.
+                </p>
+                <p id="news014">And once you're inside the walls, you need to enforce access policies on every system with another
+                    drawbridge into every room, because the firewall can only check 'north-south' traffic coming in from outside, not
+                    'east-west' traffic bouncing around inside the network.
+                </p>
+                <p id="news015">Tempered Networks has what it calls a virtual air gap
+                    firewall, which replaces the IP address with a cryptographic identity stored in secure hardware. That's one of many
+                    approaches to IoT security. G+D (the company responsible for a large proportion of SIMs) suggests using eSIMs for
+                    identity. Cisco Edge Intelligence promises anomaly detection – spotting compromised IoT devices by analysing network
+                    traffic. Microsoft has Azure IoT services that use Azure Active Directory for identity and device management
+                    (including updating devices, something that rarely happens today, using the Windows Update content distribution
+                    network). It also has Azure Sphere, a hardware platform for building devices with a custom Linux distro and a secure
+                    microcontroller unit that's been picked up by Qualcomm, NXP and other hardware suppliers.
+                </p>
+                <p id="news016">Arm – whose
+                    embedded processors are widely used in IoT devices – is adding a hardware root of trust to chips used in IoT
+                    devices, which can do things like blocking debugger access once a device has been deployed; this kind of lifecycle
+                    protection is a good way to give developers powerful tools for building systems that hackers can't use to break into
+                    them.
+                </p>
+                <p id="news017">There are also some simpler precautions you can take for IoT hardware
+                    designed before these protections: making sure devices are never installed with the default password and using
+                    strong identities for each IoT device, so it can only communicate with systems it's controlling or sending data to.
+                    IoT devices are sometimes attacked as a way into your network, so limiting privileged admin accounts and moving from
+                    basic authentication and passwords to MFA and biometrics or hardware tokens.
+                </p>
+                <p id="news018">Just remember that the reason
+                    the S in IoT stands for 'security' is that you might have to put it there yourself. Or as Microsoft Distinguished
+                    Engineer Galen Hunt put it when telling us about Azure Sphere in 2018, "there's been just enough IoT that people
+                    have begun to realise how bad it could be."</p>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<section class="amera-content news-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-12 col-md-12">
+                <blockquote class="blockquote">
+                    <h2 id="news019">IoT security: Your smart devices must have these three features to be secure.</h2>
+                    <footer class="blockquote-footer">
+                        <label id="news020">By 
+                        <a href="https://www.zdnet.com/meet-the-team/uk/dannypalmerzdnet/" target="_blank">Danny Palmer</a>
+                        <label id="news021">| January 27, 2020 -- 13:19 GMT (05:19 PST) | Topic: </label>
+                        <a href="https://www.zdnet.com/topic/security/" target="_blank" id="news022">Security</a>
+                    </label>
+                    </footer>
+                </blockquote>
+                <hr />
+                <p id="news023">Proposed laws from the UK for Internet of Things security mean vendors will need to follow new rules to be considered
+                secure.
+                </p>
+                <p id="news024">All <strong>Internet of Things and consumer smart devices</strong> will need to adhere to specific
+                security requirements, under new government proposals.
+                </p>
+                <p id="news025">The aim of the legislation is to help protect UK citizens
+                and businesses <strong>from the threats posed by cyber criminals increasingly targeting Internet of Things</strong>
+                devices.
+                </p>
+                <p id="news026">By hacking IoT devices, cyber criminals can build an army of devices that can be <strong>used to conduct
+                DDoS attacks to take down online services</strong>, while poorly-secured IoT devices can also serve as an easy way
+                for hackers to get into networks and other systems across a network.
+                </p>
+                <p id="news027">The proposed measures from the Department
+                for Culture, Media and Sport (DCMS) have been developed in conjunction with the UK's National Cyber Security Centre
+                (NCSC) and come following a consultation period with information security experts, product manufacturers and retailers
+                and others.
+                </p>
+                <blockquote class="blockquote">
+                    <p class="mb-0"  id="news028">
+                        Our new law will hold firms manufacturing and selling internet-connected devices to account and stop hackers threatening
+                        people's privacy and safety,"
+                    </p>
+                    <footer class="blockquote-footer">
+                        <label id="news029">said Matt Warman, minister for digital and broadband at
+                        DCMS.</label>
+                    </footer>
+                </blockquote>
+                <p id="news030">They also follow on from the previously suggested voluntary best practice requirements, but the legislation would
+                require that IoT devices sold in the UK must follow three particular rules to be allowed to sell products in the UK.
+                They are:
+                </p>
+                <ul>
+                    <li>
+                        <p id="news031">All consumer internet-connected device passwords must be unique and not resettable to any universal factory
+                            setting</p>
+                    </li>
+                    <li>
+                        <p id="news032">Manufacturers of consumer IoT devices must provide a public point of contact so anyone can report a vulnerability
+                            and it will be acted on in a timely manner</p>
+                    </li>
+                    <li>
+                        <p id="news033">Manufacturers of consumer IoT devices must explicitly state the minimum length of time that the device will
+                            receive security updates at the point of sale, either in store or online</p>
+                    </li>
+                </ul>
+                <p id="news034">It is currently unclear how these rules will be enforced under any future law. While the government has said that its
+                "ambition" is to introduce legislation in this area, and said this would be done "as soon as possible", there is no
+                detail on when this would take place. A DCMS spokesperson told ZDNet that the department will be working with retailers
+                and manufacturers as the proposals move forward.</p>
+                <p id="news035">Many connected devices are shipped with simple, <strong>default
+                    passwords</strong> that in many cases can't be changed, while some IoT product manufacturers often lack a means of
+                being contacted to report vulnerabilities – especially if that device is produced on the other side of the
+                world.</p>
+                <p id="news036">In addition to this, it's been known for IoT products to suddenly stop receiving support from
+                manufacturers, and providing an exact length of time that devices will be supported will allow users to think about how
+                secure the product will be in the long term.</p>
+                <p id="news037">If products don't follow these rules, the new law proposes that
+                these devices could potentially be banned from sale in the UK.</p>
+                <p id="news038">"Whilst the UK Government has previously
+                encouraged industry <strong>to adopt a voluntary approach</strong>, it is now clear that decisive action is needed to
+                ensure that strong cybersecurity is built into these products by design," said Warman.</p>
+                <p id="news039">"Our new law will hold
+                firms manufacturing and selling internet-connected devices to account and stop hackers threatening people's privacy and
+                safety. It will mean robust security standards are built in from the design stage and not bolted on as an afterthought,"
+                he added.</p>
+                <p id="news040">"Smart technology is increasingly central to the way we live our lives, so the development of this
+                legislation to ensure that we are better protected is hugely welcomed," said Nicola Hudson, policy and communications
+                director at the NCSC.</p>
+                <p id="news041">"It will give shoppers increased peace of mind that the technology they are bringing into
+                their homes is safe, and that issues such as pre-set passwords and sudden discontinuation of security updates are a
+                thing of the past."</p>
+                <p id="news042">The UK isn't alone in attempting to secure the Internet of Things -- ENISA, the European
+                Union's cybersecurity agency, <strong>is also working</strong> <strong>towards</strong> <strong>legislation</strong> in
+                this area, <strong>while the US government is also looking to regulate IoT in an effort to protect against
+                cyberattacks.</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+<label id="news000" style="display: none" ></label>
+{% endblock %}
+{% block scripts %}
+{% endblock %}

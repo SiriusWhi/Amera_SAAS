@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v4.12.0, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.12.0, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/amerafav-128x139.png" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>Key Generation</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.css">
+    <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="assets/datepicker/jquery.datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/recaptcha.css">
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+    <style>
+        .figure:hover {
+            cursor: pointer;
+        }
+
+        .form7 {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="menu cid-rPyftK0QlI" once="menu" id="menu1-f">
+        <nav class="navbar navbar-dropdown beta-menu align-items-center navbar-fixed-top navbar-toggleable-sm">
+            <div class="menu-bottom order-0 order-lg-1">
+                <div class="menu-logo">
+                    <div class="navbar-brand">
+                        <span class="">
+                            <a href="index.html">
+                                <img src="assets/images/logo-1-432x98.png" alt="Mobirise" title=""
+                                    style="height: 3.8rem;">
+                            </a>
+                        </span>
+                        <span class="navbar-caption-wrap"><a href="index.html"
+                                class="brand-link mbr-white display-5"></a></span>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent, #topLine" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown js-float-line" data-app-modern-menu="true">
+                        <li class="nav-item">
+                            <a class="nav-link link mbr-white text-primary display-4" href="index.html">
+
+                                Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link link mbr-white text-primary display-4"
+                                href="product.html">
+
+                                Products</a></li>
+                        <li class="nav-item"><a class="nav-link link mbr-white text-primary display-4"
+                                href="markets.html">
+
+                                Markets</a></li>
+                        <li class="nav-item"><a class="nav-link link mbr-white text-primary display-4"
+                                href="developer.html" aria-expanded="false">
+
+                                Developers</a></li>
+                        <li class="nav-item"><a class="nav-link link mbr-white text-primary display-4" href="news.html">
+
+                                News
+                            </a></li>
+                        <li class="nav-item">
+                            <a class="nav-link link mbr-white text-primary display-4" href="aboutus.html"
+                                aria-expanded="false">
+
+                                About Us</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4"
+                            href="login.html">Login</a></div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="mbr-section form7 cid-rQ8VvkEXrM" id="form7-1r">
+
+
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="col-md-12 col-lg-12 block-content">
+                    <div class="form-block">
+                        <div data-form-type="formoid">
+                            <form method="POST" id="image-upload-form" enctype="multipart/form-data" class="mbr-form"
+                                data-form-title="Image Upload">
+
+                                <div class="row">
+                                    <div hidden="hidden" id="image-error-alert" data-form-alert=""
+                                        class="alert alert-info col-12">Error: <span
+                                            id="image-error-description"></span>
+                                    </div>
+                                </div>
+                                <div class="row" id="key-results" hidden="hidden">
+                                    <label>
+                                        Key:
+                                    </label>
+                                    <pre><code id="key"></code></pre>
+                                </div>
+                                <div class="row justify-content-center"">
+                                    <div class=" col-sm-6 col-md-6 col-lg-6 align-self-center"
+                                    style="text-align: center;">
+                                    <figure class="figure" id="image-file-upload-figure">
+                                        <img src="assets/images/image-placeholder.svg"
+                                            class="figure-img img-fluid rounded mx-auto d-block"
+                                            alt="Click to choose an image" id="image-placeholder">
+                                        <figcaption class="figure-caption">Click to choose an image</figcaption>
+                                        <input id="image-file-upload" type="file" name="image" style="display: none"
+                                            accept="image/jpeg, image/png" />
+                                    </figure>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6" hidden="hidden" id="analysis-container">
+                                    <pre hidden="hidden"><code id="image-analysis"></code></pre>
+                                </div>
+                        </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="form-block" id="keygen-form-container" hidden="hidden">
+                    <div data-form-type="formoid">
+                        <div class="row">
+                            <div hidden="hidden" id="key-error-alert" data-form-alert=""
+                                class="alert alert-info col-12">Error: <span id="key-error-description"></span>
+                            </div>
+                        </div>
+                        <form method="GET" class="mbr-form form-with-styler" id="keygen-form">
+                            <input type="hidden" value="" name="filename" id="image-filename" />
+                            <div class="row" id="key-gen">
+                                <div class="col-auto" data-for="keysize">
+                                    <div class="form-group row">
+                                        <label for="pin" class="col-auto col-form-label">Enter PIN</label>
+                                        <div class="col-auto">
+                                            <input type="text" id="pin" name="pin" placeholder="PIN"
+                                                data-form-field="pin" value="" class="form-control form-control-sm"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto" data-for="keysize">
+                                    <div class="form-group row">
+                                        <label for="pin" class="col-auto col-form-label">Key Size:</label>
+                                        <div class="col-auto">
+                                            <select class="custom-select" name="keysize">
+                                                <option value="256">256</option>
+                                                <option value="512">512</option>
+                                                <option value="1024">1024</option>
+                                                <option value="2048" selected>2048</option>
+                                                <option value="4096">4096</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <button type="submit" id="upload-example"
+                                        class="btn btn-primary btn-bgr display-4">GENERATE KEY</button>
+                                </div>
+                            </div>
+                            <div class="row" id="results" hidden="hidden">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <label>
+                                        Generation Output:
+                                    </label>
+                                    <pre><code id="output" class="col-12"></code></pre>
+                                </div>
+                            </div>
+                        </form>
+                        <!--Formbuilder Form-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- <script src="assets/web/assets/jquery/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/dropdown/js/nav-dropdown.js"></script>
+    <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+    <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+    <script src="assets/datepicker/jquery.datetimepicker.full.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+    <script src="assets/formoid.min.js"></script>
+
+    <script src="assets/amera/key-demo.js"></script>
+
+
+
+</body>
+
+</html>

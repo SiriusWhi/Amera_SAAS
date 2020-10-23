@@ -1,0 +1,123 @@
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="amera-parallax home">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="media-container-row">
+            <div class="media-content" style="width: 45%;">
+                <div class="align-left">
+                    <p id="index001">
+                        A suite of IoT applications, soft IP, software and tools that will develop a business centric
+                        first secure standard for the Internet of Things. 
+                    </p>
+                    <p id="index002">
+                        Allowing businesses and consumers
+                        to realize the full benefits of IoT without compromising their Data, Privacy or Safety.
+                    </p>
+                </div>
+                <div>
+                    <a class="btn btn-lg btn-light" href="/" id="index003">Learn More</a>
+                    <a class="btn btn-lg btn-outline-light" href="/sign-up" id="index004">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="amera-content home-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="media-content">
+                <div class="companion-media-right">
+                    <img style="max-width: 100%;" src="assets/images/keypic-1044x709.jpg" title="" />
+                </div>
+                <h1>
+                    <p>
+                        <img
+                            src="/assets/amera/images/amera-key.png"
+                            style="width: 25%;"
+                        /><br />
+                    </p>
+                </h1>
+                <div>
+                    <p id=index005>
+                        AMERA IoT has developed a way for individual users and companies to secure access to data and
+                        things using a quantum computer resistant key generation system. Unlike other systems for key
+                        generation, our system can be used on a mobile, laptop or desktop windows, android, IOS, and
+                        various IoT devices.
+                    </p>
+                    <p id=index006>
+                        The key generation is simple and easy to use by an unsophisticated user. The user simply chooses
+                        a High-Resolution image and a 6 to 12-digit pin. The user’s device then sends limited data
+                        derived from the image to the AMERA Host computer then our host computer provides additional
+                        data to the key generation application on the user’s local device to build multiple keys for
+                        many different purposes.
+                    </p>
+                    <p id=index007>
+                        The key that is generated has a large amount of entropy and is quantum computer resistant and
+                        will work with AES 128, 192, 256 and up and coming future AES versions up to 4096 bits. This key
+                        can easily be duplicated by the user as long as they have the original image and pin and are
+                        subscribed to AMERA hosting either by us directly or through one of our partner developers or
+                        manufacturers. We have a patent-pending for this process in software and how it is used in
+                        conjunction with our AMERAlock circuit, Soft IP and chips.
+                    </p>
+                </div>
+                <div>
+                    <a class="btn btn-lg btn-outline-primary" href="/key-demo" id="index008">Learn More</a>
+                    <a class="btn btn-lg btn-outline-primary" href="/video" id="index009">Watch the Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="divider">
+    <hr>
+</div>
+<section class="amera-content home-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="media-content">
+                <div class="companion-media-right">
+                    <img style="max-width: 100%;" src="assets/images/lockpic-1044x709.jpg" title="" />
+                </div>
+                <h1>
+                    <p>
+                        <img
+                            src="/assets/amera/images/amera-lock.png"
+                            style="width: 25%;"
+                        /><br />
+                    </p>
+                </h1>
+                <div>
+                    <p id=index010>
+                        AMERALock is a combination of methodology, implementation, circuit design and a custom chipset
+                        that includes cryptographic acceleration of AES up to 4096 bits and the requirement of AMERAKey
+                        to use. The methodology is to separate an IoT device circuit into three parts: Communications
+                        Module, AMERALock circuit with custom chips -eventually one chip, and the applications circuit.
+                    </p>
+                    <p id=index011>
+                        IoT devices can be hacked for many reasons. But the number one reason is that these functions
+                        are typically in almost all IoT devices combined for cost reduction and so that the providers
+                        also have access to the user’s data and actions. We eliminate their access and put the user in
+                        control of the device and all of the data emanating from the device.
+                    </p>
+                    <p id=index012>
+                        Initially when AMERALock is implemented in a software-only solution the applications software
+                        that uses AMERAkey will only be available from AMERA IoT Inc. When AMERALock is used in hardware
+                        it will require AMERA chips or Soft IP as well as our Hosting service and or enterprise custom
+                        installed audited software on their host (Examples FISERV, Toyota, and Walmart).
+                    </p>
+                </div>
+                <div>
+                    <a class="btn btn-lg btn-outline-primary" href="/" id="index013">Learn More</a>
+                    <a class="btn btn-lg btn-outline-primary" href="/video" id="index014">Watch the Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<label id="index000" style="display: none" ></label>
+{% endblock %}
+{% block scripts %}
+{% endblock %}

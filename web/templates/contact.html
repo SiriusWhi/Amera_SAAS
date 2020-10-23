@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+<section class="developers icons-submenu">
+    <div class="container">
+        <div class="align-center">
+            <div class="media-container-row">
+                <div class="card p-3 col-12 col-md-4 col-lg-3">
+                    <div class="card-img">
+                        <a href="/board-of-advisors">
+                            <img src="/assets/node_modules/bootstrap-icons/icons/person.svg" alt="" width="64"
+                                height="64" title="Amera Mail">
+                        </a>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title" id="about-us001">
+                            Board of Advisors
+                        </h4>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-4 col-lg-3">
+                    <div class="card-img">
+                        <a href="/partners">
+                            <img src="/assets/node_modules/bootstrap-icons/icons/link.svg" alt="" width="64" height="64"
+                                title="Amera Share">
+                        </a>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title" id="about-us002">
+                            Our Partners
+                        </h4>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-4 col-lg-3">
+                    <div class="card-img">
+                        <a href="/team">
+                            <img src="/assets/node_modules/bootstrap-icons/icons/people.svg" alt="" width="64"
+                                height="64" title="Amera Suite">
+                        </a>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title" id="about-us003">
+                            Our Team
+                        </h4>
+                    </div>
+                </div>
+                <div class="card p-3 col-12 col-md-4 col-lg-3">
+                    <div class="card-img">
+                        <a href="/contact">
+                            <img src="/assets/node_modules/bootstrap-icons/icons/envelope.svg" alt="" width="64"
+                                height="64" title="Amera Vault">
+                        </a>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title" id="about-us004">
+                            Contact Us
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="amera-content">
+   <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-12 col-lg-12">
+                <form method="POST">
+                    <div class="form-row">
+                        <div class="col-md-12">
+                            <h2 id="contact001">Send us your questions, and we'll get back to you as soon as possible</h2>
+                        </div>
+                        <div class="col-md-12 form-group " data-for="name">
+                            <input type="text" name="name" placeholder="Your Name" data-form-field="Name" required="required" class="form-control">
+                        </div>
+                        <div data-for="email" class="col-md-12 form-group ">
+                            <input type="text" name="email" placeholder="Email" data-form-field="Email" class="form-control" required="required">
+                        </div>
+                        <div class="col-md-12 form-group " data-for="message">
+                            <textarea name="message" placeholder="Message" data-form-field="Message" class="form-control"></textarea>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                            <button type="submit" class="btn btn-primary" id="contact002">SEND MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<label id="contact000" style="display: none" ></label>
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+

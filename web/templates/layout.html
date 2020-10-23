@@ -1,0 +1,130 @@
+{% block doc -%}
+<!DOCTYPE html>
+<html lang="en">
+    {%- block html %}
+
+    <head>
+        {%- block head %}
+        <title>{% block title %}{{title|default}}{% endblock title %}</title>
+
+        {%- block metas %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="shortcut icon" href="/assets/images/amerafav-128x139.png" type="image/x-icon" />
+        <meta name="description" content="{{description|default}}" />
+
+        <link rel="stylesheet" href="/assets/node_modules/bootstrap/dist/css/bootstrap-reboot.css" />
+        <link rel="stylesheet" href="/assets/node_modules/bootstrap/dist/css/bootstrap-grid.css" />
+        <link rel="stylesheet" href="/assets/node_modules/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="/assets/amera/css/overrides.css" />
+        <link rel="stylesheet" href="/assets/amera/css/overrides-992.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        {%- endblock metas %} 
+        
+        {%- block styles %}
+        <!-- Bootstrap -->
+        {%- endblock styles %} 
+    {%- endblock head %}
+    </head>
+
+    <body>
+    {% block body -%}
+    <!--<a href="#en" data-reload id="layout001">English</a>
+    <a href="#jp" data-reload id="layout002">Japanese</a>-->
+
+    {% block navbar %}
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <div class="navbar-logo">
+                <a href="/" class="navbar-brand">
+                    <img src="/assets/images/logo-1-432x98.png" title="AMERA" />
+                </a>
+            </div>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent, #topLine"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a id="layout003" class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="layout004" class="nav-link" href="/product">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="layout005" class="nav-link" href="/markets">Markets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="layout006" class="nav-link" href="/developer">Developers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="layout007" class="nav-link" href="/news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="layout008" class="nav-link" href="/about-us">About Us</a>
+                    </li>
+                </ul>
+                <div class="navbar-buttons">
+                    <a id="layout009" class="btn btn-sm btn-primary login-btn d-none" href="/login">Login</a>
+                    <a class="btn btn-sm btn-primary account-btn d-none" href="/account">
+                        <svg class="bi bi-person-lines-fill" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 100-6 3 3 0 000 6zm7 1.5a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5zm-2-3a.5.5 0 01.5-.5h4a.5.5 0 010 1h-4a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h4a.5.5 0 010 1h-4a.5.5 0 01-.5-.5zm2 9a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2a.5.5 0 01-.5-.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        &nbsp;&nbsp;
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        {%- endblock navbar %}
+        <section class="content">
+        {% block content -%}1
+        {%- endblock content %}
+        </section>
+        {% block footer %}
+        <footer class="footer">
+            <div class="container">
+                <div class="align-center">
+                    <a id="layout010" class="btn-underline" href="/">Home</a>
+                    <a id="layout011" class="btn-underline" href="/product">Products</a>
+                    <a id="layout012" class="btn-underline" href="/markets">Markets</a>
+                    <a id="layout013" class="btn-underline" href="/developer">Developers</a>
+                    <a id="layout014" class="btn-underline" href="/news">News</a>
+                    <a id="layout015" class="btn-underline" href="/about-us">About Us</a>
+                    <a id="layout016" class="btn-underline login-btn d-none" href="/login">Login</a>
+                    <a id="layout017" class="btn-underline account-btn d-none" href="/account">My Account</a>
+                </div>
+        
+                <div class="copyright align-center mb-3">
+                    <p id="layout018" class="mb-0 text-copyright mbr-fonts-style">
+                        &copy; Copyright 2020 AMERA IoT Inc. - All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </footer>
+        {%- endblock footer %} 
+        <script type="application/javascript" src="/assets/node_modules/jquery/dist/jquery.js"></script>
+        <script type="application/javascript" src="/assets/amera/js/site.js"></script>
+        <script type="application/javascript" src="/assets/node_modules/popper.js/dist/popper.js"></script>
+        <script type="application/javascript" src="/assets/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        
+        {%- block scripts %} 
+        <!-- jQuery & Bootstrap -->
+        
+        {%- endblock scripts %}
+    {%- endblock body %}
+    </body>
+    {%- endblock html %}
+</html>
+{% endblock doc -%}

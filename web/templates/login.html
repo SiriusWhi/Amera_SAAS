@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<section class="amera-content login-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-12 col-lg-12 block-content">
+                <h2 class="align-center" id="login001">LOG IN TO&nbsp;<strong>AMERA IoT</strong></h4>
+                <p class="align-center" id="login002">Fill out the form below</p>
+                <div class="row">
+                    <div hidden="hidden" id="login-error-alert" data-form-alert="" class="alert alert-danger col-12" role="alert"><span
+                            id="login-error-description"></span>
+                    </div>
+                </div>
+                <form method="POST" id="login">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="email" name="username" placeholder="test@email.com" class="form-control" value="">
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                            <input type="password" name="password" placeholder="Password" class="form-control" required="required" value="">
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" id="login-submit" class="btn btn-primary" id="login003">LOGIN</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<label id="login000" style="display: none" ></label>
+{% endblock %}
+{% block scripts %}
+<script src="assets/amera/js/login.js"></script>
+{% endblock %}

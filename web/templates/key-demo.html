@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+{% block title %}Key Generation Demo{% endblock %}
+{% block content %}
+<section class="keydemo-content">
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-12 col-lg-12 block-content">
+                <div class="form-block">
+                    <form method="POST" id="image-upload-form" enctype="multipart/form-data">
+
+                        <div class="row">
+                            <div hidden="hidden" id="image-error-alert" data-form-alert=""
+                                class="alert alert-info col-12">Error: <span id="image-error-description"></span>
+                            </div>
+                        </div>
+                        <div class="row" id="key-results" hidden="hidden">
+                            <label>
+                                Key:
+                            </label>
+                            <pre><code id="key"></code></pre>
+                        </div>
+                        <div class="row justify-content-center">
+                                    <div class=" col-sm-6 col-md-6 col-lg-6 align-self-center"
+                            style="text-align: center;">
+                            <figure class="figure" id="image-file-upload-figure">
+                                <img src="assets/images/image-placeholder.svg"
+                                    class="figure-img img-fluid rounded mx-auto d-block" alt="Click to choose an image"
+                                    id="image-placeholder">
+                                <figcaption class="figure-caption" id="key-demo001">Click to choose an image</figcaption>
+                                <input id="image-file-upload" type="file" name="image" style="display: none"
+                                    accept="image/jpeg, image/png" />
+                            </figure>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6" hidden="hidden" id="analysis-container">
+                            <pre hidden="hidden"><code id="image-analysis"></code></pre>
+                        </div>
+
+                    </form>
+                </div>
+                <div id="keygen-form-container" hidden="hidden">
+                    <div class="row">
+                        <div hidden="hidden" id="key-error-alert" data-form-alert="" class="alert alert-info col-12">
+                            Error: <span id="key-error-description"></span>
+                        </div>
+                    </div>
+                    <form method="GET" id="keygen-form">
+                        <input type="hidden" value="" name="filename" id="image-filename" />
+                        <div class="row" id="key-gen">
+                            <div class="col-auto" data-for="keysize">
+                                <div class="form-group row">
+                                    <label for="pin" class="col-auto col-form-label" id="key-demo002">Enter PIN</label>
+                                    <div class="col-auto">
+                                        <input type="text" id="pin" name="pin" placeholder="PIN" data-form-field="pin"
+                                            value="" class="form-control form-control-sm" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto" data-for="keysize">
+                                <div class="form-group row">
+                                    <label for="pin" class="col-auto col-form-label" id="key-demo003">Key Size:</label>
+                                    <div class="col-auto">
+                                        <select class="custom-select" name="keysize">
+                                            <option value="256">256</option>
+                                            <option value="512">512</option>
+                                            <option value="1024">1024</option>
+                                            <option value="2048" selected>2048</option>
+                                            <option value="4096">4096</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto">
+                                <button type="submit" id="upload-example"
+                                    class="btn btn-primary btn-bgr display-4">GENERATE
+                                    KEY</button>
+                            </div>
+                        </div>
+                        <div class="row" id="results" hidden="hidden">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <label id="key-demo004">
+                                    Generation Output:
+                                </label>
+                                <pre><code id="output" class="col-12"></code></pre>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+</section>
+<label id="key-demo000" style="display: none" ></label>
+{% endblock %}
+{% block scripts %}
+<script src="/assets/amera/js/key-demo.js"></script>
+{% endblock %}

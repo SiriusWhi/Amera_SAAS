@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+flake8 = "*"
+
+[packages]
+markdown = "*"
+pyyaml = "*"
+flask = "*"
+flask-flatpages = "*"
+watchdog = "*"
+gunicorn = "==20.0.4"
+python-dateutil = "==2.8.1"
+meinheld = "==1.0.1"
+vyper-config = "==0.6.1"
+requests = "*"
+
+[requires]
+python_version = "3.6"
+
+[scripts]
+"dev" = "python run.py --env-name=LOCAL"
+"docker" = "env GUNICORN_CMD_ARGS=\"--reload\" python run.py --env-name=LOCAL"
+"server" = "python run.py --env-name=PROD"
